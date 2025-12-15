@@ -1,12 +1,12 @@
 field_name,type,units,allowed_values,description,required,notes
-species,character,,P_alchata|P_orientalis,Species code,recommended,Omit if using one file per species.
-site_id,character,,,Stable site identifier (recommended to keep constant across analyses).,recommended,"If not present, create once and freeze."
+species,character,,P_alchata|P_orientalis,Species code,optional,Omit if using one file per species.
+site_id,character,,,Stable site identifier (optional to keep constant across analyses).,optional,"If not present, create once and freeze."
 year,integer,year,,Observation year.,optional,Use if observations span multiple years.
 date,character,YYYY-MM-DD,,Observation date.,optional,Use instead of year if available.
 pa,integer,,0|1,Presence (1) / absence (0) response used for SDMs.,yes,
 x,numeric,m,,UTM easting coordinate (WGS 84 / UTM zone 29N; EPSG:32629).,yes,
 y,numeric,m,,UTM northing coordinate (WGS 84 / UTM zone 29N; EPSG:32629).,yes,
-epsg,integer,,32629,EPSG code of coordinate reference system used for x/y.,recommended,
+epsg,integer,,32629,EPSG code of coordinate reference system used for x/y.,optional,
 RED,integer,scaled reflectance,,MODIS Terra surface reflectance red band (MOD09GQ; 250 m).,optional,Scale factors and QA filtering applied (see SM1.1).
 NIR,integer,scaled reflectance,,MODIS Terra surface reflectance near-infrared band (MOD09GQ; 250 m).,optional,Scale factors and QA filtering applied (see SM1.1).
 NDVI,numeric,,,Normalized Difference Vegetation Index from RED and NIR; proxy for green herbaceous cover.,optional,Computed from MOD09GQ; Rouse et al. 1974.

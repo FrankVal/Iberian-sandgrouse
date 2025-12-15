@@ -1,10 +1,10 @@
-"field_name","type","units","allowed_values","description","required","notes"
-"species","character","","P_alchata|P_orientalis","Species code","yes","If one file per species, species column can be omitted"
-"site_id","character","","","Stable site identifier used across years","yes",""
-"year","integer","year","","Year t","yes",""
-"occupied","integer","","0|1","Occupancy state in year t (if stored directly)","conditional","If you store annual states, persistence/extinction can be derived in scripts"
-"persistence","integer","","0|1","1 if occupied at t and t+1 (if used as response)","optional","Define the rule explicitly in scripts + README"
-"extinction","integer","","0|1","1 if occupied at t and empty at t+1 (if used as response)","optional","Define the rule explicitly in scripts + README"
-"n_visits","integer","visits",">=0","Number of visits/surveys (if available)","optional",""
-"effort_km","numeric","km",">=0","Survey effort in km (if available)","optional",""
-"region","character","","","Region/stratum (if used as random effect)","optional",""
+field_name,type,units,allowed_values,description,required,notes
+UTMCODE,character,,,"10×10 km UTM grid cell code used as spatial unit (Mougeot et al., 2021).",yes,Primary key for joins across demography and landscape metrics.
+Status,character,,Persistent|Extinct,Demographic status of the cell over the interval: Persistent (retained) or Extinct (lost).,yes,"Define the exact rule in Methods (e.g., occupied in both censuses vs lost)."
+AREA_MN,numeric,,,Class-level landscape metric: mean patch area of the focal habitat class within the 10×10 km cell.,yes,Metric computed for the habitat class used in the paper; units depend on map resolution/CRS.
+ED,numeric,,,Class-level landscape metric: edge density of the focal habitat class within the 10×10 km cell.,yes,Metric computed for the habitat class used in the paper; units depend on map resolution/CRS.
+LPI,numeric,,,Class-level landscape metric: largest patch index of the focal habitat class within the 10×10 km cell.,yes,Often expressed as % of landscape (confirm your implementation).
+NP,numeric,,,Class-level landscape metric: number of patches of the focal habitat class within the 10×10 km cell.,yes,Integer count; class-level.
+TA,numeric,,,Class-level landscape metric: total area of the focal habitat class within the 10×10 km cell.,yes,"Area; confirm units (e.g., ha, km2, m2) from your workflow."
+Year,integer,year,,Reference year / time slice associated with the metrics and/or status.,yes,
+ncPALCH,character,,,Regional sector label used in the P. alchata analyses (grouping/stratification variable).,recommended,"If this is numeric in your table, switch type to integer."

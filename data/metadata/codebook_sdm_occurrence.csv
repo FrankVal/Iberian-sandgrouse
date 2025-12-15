@@ -1,8 +1,8 @@
 field_name,type,units,allowed_values,description,required,notes
-species,character,,P_alchata|P_orientalis,Species code,optional,Omit if using one file per species.
-site_id,character,,,Stable site identifier (optional to keep constant across analyses).,optional,"If not present, create once and freeze."
-year,integer,year,,Observation year.,optional,Use if observations span multiple years.
-date,character,YYYY-MM-DD,,Observation date.,optional,Use instead of year if available.
+species,character,,P_alchata|P_orientalis,Species code,optional,
+site_id,character,,,Stable site identifier (optional to keep constant across analyses).,optional,
+year,integer,year,,Observation year.,optional,
+date,character,YYYY-MM-DD,,Observation date.,optional,
 pa,integer,,0|1,Presence (1) / absence (0) response used for SDMs.,yes,
 x,numeric,m,,UTM easting coordinate (WGS 84 / UTM zone 29N; EPSG:32629).,yes,
 y,numeric,m,,UTM northing coordinate (WGS 84 / UTM zone 29N; EPSG:32629).,yes,

@@ -1,0 +1,8 @@
+"field_name","type","units","allowed_values","description","required","notes"
+"species","character","","P_alchata|P_orientalis","Species code","yes","If one file per species, species column can be omitted"
+"site_id","character","","","Stable site identifier used across datasets","recommended","Prefer an existing unique ID; otherwise create and freeze it"
+"year","integer","year","","Observation year (if applicable; otherwise document fixed-year dataset)","recommended","If no year column exists, document temporal meaning in README"
+"pa","integer","","0|1","Presence (1) / absence (0)","yes",""
+"x","numeric","meters","","UTM easting (WGS84 / UTM 29N)","yes",""
+"y","numeric","meters","","UTM northing (WGS84 / UTM 29N)","yes",""
+"epsg","integer","","32629","EPSG code of coordinate reference system","recommended","Your layer reports WGS 84 / UTM zone 29N"

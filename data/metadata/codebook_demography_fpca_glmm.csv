@@ -1,10 +1,10 @@
 field_name,type,units,allowed_values,description,required,notes
-UTMCODE,character,,,"10×10 km UTM grid cell code used as spatial unit (Mougeot et al., 2021).",yes,Primary key for joins across demography and landscape metrics.
-Status,character,,Persistent|Extinct,Demographic status of the cell over the interval: Persistent (retained) or Extinct (lost).,yes,"Define the exact rule in Methods (e.g., occupied in both censuses vs lost)."
-AREA_MN,numeric,,,Class-level landscape metric: mean patch area of the focal habitat class within the 10×10 km cell.,yes,Metric computed for the habitat class used in the paper; units depend on map resolution/CRS.
-ED,numeric,,,Class-level landscape metric: edge density of the focal habitat class within the 10×10 km cell.,yes,Metric computed for the habitat class used in the paper; units depend on map resolution/CRS.
-LPI,numeric,,,Class-level landscape metric: largest patch index of the focal habitat class within the 10×10 km cell.,yes,Often expressed as % of landscape (confirm your implementation).
-NP,numeric,,,Class-level landscape metric: number of patches of the focal habitat class within the 10×10 km cell.,yes,Integer count; class-level.
-TA,numeric,,,Class-level landscape metric: total area of the focal habitat class within the 10×10 km cell.,yes,"Area; confirm units (e.g., ha, km2, m2) from your workflow."
-Year,integer,year,,Reference year / time slice associated with the metrics and/or status.,yes,
-ncPALCH,character,,,Regional sector label used in the P. alchata analyses (grouping/stratification variable).,recommended,"If this is numeric in your table, switch type to integer."
+"UTMCODE,character,,,""10×10 km UTM grid cell code (UTMCODE) used as spatial unit (Mougeot et al., 2021)."",yes,Primary key for joins across demography and landscape metrics."
+Status,character,,Persistent|Extinct,Demographic status of the cell over the interval: Persistent or Extinct.,yes,Define the exact rule for Persistent/Extinct in Methods.
+TA,numeric,km^2,,Class area (CA) of the focal habitat class within the 10×10 km cell.,yes,In the manuscript/figures this metric is labelled CA (km^2).
+AREA_MN,numeric,ha,,Mean patch area (AREA_MN) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (ha).
+ED,numeric,m/ha,,Edge density (ED) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (m/ha).
+LPI,numeric,%,,Largest patch index (LPI) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (%).
+NP,integer,n,,Number of patches (NP) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (count).
+Year,integer,year,,Reference year associated with the landscape metrics/status.,yes,
+RegSect,character,,,Regional sector identifier,recommended,

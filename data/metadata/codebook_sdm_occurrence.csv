@@ -15,7 +15,7 @@ GLCM_M,numeric,,,NDVI-based GLCM texture: mean (3-pixel circular moving window).
 GLCM_V,numeric,,,NDVI-based GLCM texture: variance (3-pixel circular moving window).,optional,Haralick et al. 1973.
 GLCM_H,numeric,,,NDVI-based GLCM texture: homogeneity (3-pixel circular moving window).,optional,Haralick et al. 1973.
 GLCM_C,numeric,,,NDVI-based GLCM texture: contrast (3-pixel circular moving window).,optional,Haralick et al. 1973.
-GPP,integer,product units,,MODIS Gross Primary Productivity (MOD17A2H; 8-day composite); proxy for ecosystem productivity/biomass production.,optional,Running et al. 2004.
+GPP,integer,kg*C/m²,,MODIS Gross Primary Productivity (MOD17A2H; 8-day composite); proxy for ecosystem productivity/biomass production.,optional,Running et al. 2004.
 LST,numeric,°C,,Terra MODIS land surface temperature (MOD11A1; daily).,optional,Values in dataset are on °C scale.
 PDSI,integer,,,Palmer Drought Severity Index from TerraClimate; proxy for drought/moisture conditions.,optional,Abatzoglou et al. 2018.
 HH,numeric,dB,,ALOS PALSAR annual L-band backscatter (HH polarization); proxy for vertical structure/roughness.,optional,Shimada et al. 2014.
@@ -28,10 +28,10 @@ TWI,numeric,,,Topographic Wetness Index derived from DEM.,optional,Derived layer
 Bio1,numeric,°C,,Bioclimatic variable Bio1: annual mean temperature.,optional,Fick & Hijmans 2017.
 Bio2,numeric,°C,,Bioclimatic variable Bio2: mean diurnal range.,optional,Fick & Hijmans 2017.
 Bio12,numeric,mm,,Bioclimatic variable Bio12: annual precipitation.,optional,Fick & Hijmans 2017.
-OCD,integer,product units,,Organic carbon density (soil).,optional,Poggio et al. 2021.
-SC,integer,product units,,Sand content (soil).,optional,Poggio et al. 2021.
-BD,integer,product units,,Bulk density (soil).,optional,Poggio et al. 2021.
-pH,integer,pH units,,Soil pH.,optional,Poggio et al. 2021.
+OCD,integer,hg/m³,,Organic carbon density (soil).,optional,Poggio et al. 2021.
+SC,integer,g/kg,,Sand content (soil).,optional,Poggio et al. 2021.
+BD,integer,cg/cm³,,Bulk density (soil).,optional,Poggio et al. 2021.
+pH,integer,pH*10,,Soil pH.,optional,Poggio et al. 2021.
 CLC,integer,category code,,CORINE Land Cover class (categorical land-use variable).,optional,Büttner et al. 2012.
 Catt_Ext,numeric,LSU km^-2,>=0,Extensive cattle density (livestock units per km²) at municipality-year level.,optional,Derived from INE/MAPA head counts; see SM1.2.
 Shee_Ext,numeric,LSU km^-2,>=0,Extensive sheep density (livestock units per km²) at municipality-year level.,optional,See SM1.2.

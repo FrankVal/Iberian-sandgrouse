@@ -9,7 +9,7 @@ y,numeric,m,,UTM northing coordinate (WGS 84 / UTM zone 29N; EPSG:32629).,yes,
 epsg,integer,,32629,EPSG code of coordinate reference system used for x/y.,recommended,
 RED,integer,scaled reflectance,,MODIS Terra surface reflectance red band (MOD09GQ; 250 m).,optional,Scale factors and QA filtering applied (see SM1.1).
 NIR,integer,scaled reflectance,,MODIS Terra surface reflectance near-infrared band (MOD09GQ; 250 m).,optional,Scale factors and QA filtering applied (see SM1.1).
-NDVI,numeric,,"[-1,1]",Normalized Difference Vegetation Index from RED and NIR; proxy for green herbaceous cover.,optional,Computed from MOD09GQ; Rouse et al. 1974.
+NDVI,numeric,,,Normalized Difference Vegetation Index from RED and NIR; proxy for green herbaceous cover.,optional,Computed from MOD09GQ; Rouse et al. 1974.
 MSAVI2,numeric,,,Modified Soil Adjusted Vegetation Index 2; proxy for openness/green cover with reduced bare-soil influence.,optional,Qi et al. 1994.
 GLCM_M,numeric,,,NDVI-based GLCM texture: mean (3-pixel circular moving window).,optional,Haralick et al. 1973; moving-window approach in paper.
 GLCM_V,numeric,,,NDVI-based GLCM texture: variance (3-pixel circular moving window).,optional,Haralick et al. 1973.

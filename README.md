@@ -8,13 +8,6 @@ This repository contains **data + reproducible R code** supporting our analyses 
 
 The workflow links **species distribution modelling (SDMs)** with **annual habitat mapping (2005–2022)**, **landscape change metrics**, and **functional persistence/extinction modelling** using **FPCA–GLMM**.
 
----
-
-## 🔗 Quick links
-
-- 📦 **Dataset (Figshare)**: https://doi.org/10.6084/m9.figshare.30898223  
-- 🛰️ **Google Earth Engine (GEE) code directory**: https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia  
-- 🐛 **Issues / questions**: please use GitHub Issues in this repository
 
 ---
 

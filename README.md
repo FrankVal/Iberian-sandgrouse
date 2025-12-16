@@ -1,129 +1,157 @@
-# Iberian sandgrouse — habitat dynamics & persistence modelling (Spain, 2005–2022)
+# Iberian Sandgrouse (Spain, 2005–2022) — habitat dynamics & persistence modelling
 
-![R](https://img.shields.io/badge/R-%E2%89%A5%204.2-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green)
-
-🧭 **Purpose.** Reproducible **data + R workflow** supporting a manuscript on how **habitat composition and configuration** relate to **persistence/extinction** of two declining sandgrouse in Spanish agro‑steppes.
+This repository contains **data + reproducible R code** supporting our analyses of two declining Iberian sandgrouses:
 
 🐤 **Focal species**
 - **Pin‑tailed Sandgrouse** (*Pterocles alchata*) — PTS
-- **Black‑bellied Sandgrouse** (*Pterocles orientalis*) — BBS
+- **Black‑bellied Sandgrouse** (*Pterocles orientalis*
+
+The workflow links **species distribution modelling (SDMs)** with **annual habitat mapping (2005–2022)**, **landscape change metrics**, and **functional persistence/extinction modelling** using **FPCA–GLMM**.
 
 ---
 
-## 💿 What this repository does
+## 🔗 Quick links
 
-This pipeline links three components:
-
-1) **Spatial SDMs (habitat suitability)** from presence/absence data and environmental predictors  
-2) **Annual habitat maps (2005–2022)** + FRAGSTATS‑style **habitat amount / composition / configuration** metrics  
-3) **Persistence/extinction modelling (2005–2019)** using FPCA–GLMM to estimate **time‑varying** landscape effects
-
-> The repository is organised so analyses can be re‑run from the project root using relative paths.
-
-### 🔎 Study design (at a glance)
-
-- **Occurrences (SDMs):** presence/absence records aggregated to a common grid for modelling.
-- **Persistence/extinction:** local status inferred by comparing an early vs a recent survey period.
-- **Habitat trends:** yearly suitability/binary habitat maps summarised for **2005–2022**.
+- 📦 **Dataset (Figshare)**: https://doi.org/10.6084/m9.figshare.30898223  
+- 🛰️ **Google Earth Engine (GEE) code directory**: https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia  
+- 🐛 **Issues / questions**: please use GitHub Issues in this repository
 
 ---
 
-## 🚀 Quick start
+## 🧭 Summary
 
-Clone the repo and run the scripts in order:
+Across Iberian agro-steppe landscapes, sandgrouse populations have declined alongside widespread land-use change and agricultural intensification. Here we combine SDMs with time-series habitat mapping and landscape metrics to quantify **where suitable habitat occurs**, **how it changed from 2005–2022**, and **how habitat dynamics relate to persistence/extinction patterns**.
 
-```bash
-git clone https://github.com/FrankVal/Iberian-sandgrouse.git
-cd Iberian-sandgrouse
+At a high level, the pipeline:
 
-Rscript scripts/01_screening-boruta.R
-Rscript scripts/02_spatial-SDMs.R
-Rscript scripts/03_threshold-selection.R
-Rscript scripts/04_national-trends_fragstats-metrics.R
-Rscript scripts/05_regional-trends_metrics.R
-Rscript scripts/06_fpca-glmm.R
+1) fits SDMs using occurrence data and environmental predictors,  
+2) produces annual suitability surfaces and binary habitat maps,  
+3) derives landscape metrics (e.g., habitat amount and configuration) nationally and by region, and  
+4) models persistence/extinction using FPCA–GLMM on demographic trajectories.
+
+---
+
+## ✨ Key features
+
+- 🔎**SDMs** with Random Forest and spatial filtering (Moran eigenvector–style approaches when applicable)
+- 🗺️ **Annual habitat maps** (2005–2022) for both species
+- 📏 **Landscape trends** using FRAGSTATS-style metrics (national,regional,local)
+- 🧬 **Demography + persistence modelling** via FRAGSTATS metrics and sandgrouse status using FPCA–GLMM
+
+---
+
+## 🗂️ Repository structure
+
+```
+.
+├── data/
+│   ├── demography_fpca_glmm/
+│   │   ├── P_alchata_demography.csv
+│   │   ├── P_orientalis_demography.csv
+│   │   └── README.md
+│   ├── metadata/
+│   │   ├── codebook_demography_fpca_glmm.csv
+│   │   ├── codebook_sdm_occurrence.csv
+│   │   ├── sites_lookup.csv
+│   │   └── README.md
+│   └── sdm/
+│       ├── P_alchata_presence_absence_*.csv
+│       ├── P_orientalis_presence_absence_*.csv
+│       └── README.md
+├── scripts/
+│   ├── 01_screening-boruta.R
+│   ├── 02_spatial-SDMs.R
+│   ├── 03_threshold-selection.R
+│   ├── 04_national-trends_fragstats-*.R
+│   ├── 05_regional-trends_metrics.R
+│   └── 06_fpca-glmm.R
+├── LICENSE
+└── README.md
 ```
 
-⚠️ Some steps may rely on large rasters / third‑party layers that are not stored in GitHub. See `data/README.md` and the script headers for download / path instructions.
+> Each `data/**/README.md` describes the files in that folder and expected formats.
 
 ---
 
-## 📁 Repository layout
+## 🚀 Setup
 
-```text
-Iberian-sandgrouse/
-├─ data/
-│  ├─ sdm/                    # occurrence tables used for SDMs
-│  ├─ demography_fpca_glmm/   # cell-level demographic status tables
-│  ├─ metadata/               # codebooks + lookup tables
-│  └─ README.md               # data inventory / provenance notes
-├─ scripts/                   # numbered analysis scripts (run in order)
-├─ README.md
-├─ LICENSE
-└─ .gitignore
-```
+### 1) Get the data
+Download the dataset from Figshare and place the contents in the repository `data/` folder (keeping the same subfolder structure):
 
----
+📦 https://doi.org/10.6084/m9.figshare.30898223
 
-## 📟 Scripts
+### 2) R environment
+We recommend running with a recent R version (≥ 4.2). Install required packages before running the scripts.
 
-🟦 **01 — screening & predictor filtering**  
-`01_screening-boruta.R` screens candidate predictors (e.g., Boruta / correlation checks) to reduce redundancy before SDMs.
+Typical dependencies include (non-exhaustive):  
+`terra`, `sf`, `dplyr`, `tidyr`, `ggplot2`, `readr`, `stringr`, `lubridate`,  
+`ranger`, `spatialRF` (if used), `landscapemetrics`, `glmmTMB` (and/or similar), and FPCA utilities.
 
-🟩 **02 — spatial SDMs**  
-`02_spatial-SDMs.R` fits spatially explicit SDMs (Random Forest with spatial autocorrelation control) and exports suitability predictions.
-
-🟨 **03 — thresholding & binary habitat**  
-`03_threshold-selection.R` converts continuous suitability to yearly habitat / non‑habitat maps using an explicit thresholding approach.
-
-🟧 **04 — national habitat trends (2005–2022)**  
-`04_national-trends_fragstats-metrics.R` computes national‑level FRAGSTATS‑style class metrics from annual habitat maps.
-
-🟥 **05 — regional trends**  
-`05_regional-trends_metrics.R` repeats trend analyses at regional / sub‑national scales and exports summary tables.
-
-🟪 **06 — persistence/extinction modelling**  
-`06_fpca-glmm.R` links landscape dynamics to persistence/extinction (10×10 km cells) using FPCA‑GLMM and produces effect curves and model outputs.
-
----
-
-## 🗃️ Data (what’s included here)
-
-✅ This repository includes key **analysis‑ready tables** and **metadata**, with codebooks in `data/metadata/`.
-
-- `data/sdm/` — presence/absence tables per species  
-- `data/demography_fpca_glmm/` — demographic status tables used in persistence/extinction analyses  
-- `data/metadata/` — codebooks + lookup tables used across scripts
-
-If you add new datasets, please also update `data/README.md` (source, date, processing notes, and any access constraints).
-
----
-
-## 🔓 Reproducibility notes
-
-- Run from the **repository root** (avoid absolute paths).  
-- Set / record random seeds where applicable (SDM resampling, RF fitting).  
-- Consider freezing package versions with `renv` (optional but recommended):
-
+If your workflow uses **renv**, run:
 ```r
-install.packages("renv")
-renv::init()      # once, creates renv.lock
-renv::restore()   # on a new machine
+renv::restore()
 ```
 
 ---
 
-## 📌 Citation
+## 🛰️ Google Earth Engine (optional but recommended)
 
-Please cite the associated manuscript (details/DOI will be added when available).
+Some inputs (e.g., remote-sensing predictors and/or mapped surfaces) can be generated in Google Earth Engine.
 
-Tip: once a DOI is minted (e.g., Zenodo release), add a `CITATION.cff` to enable “Cite this repository” on GitHub.
+👉 Open the shared GEE repository here:  
+https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia
 
 ---
 
-## 🪪 License
+## 📟  Reproduce the analysis
 
-This project is released under the **MIT License** (see `LICENSE`).
+Run scripts in order from the project root:
+
+1. **`scripts/01_screening-boruta.R`**  
+   Variable screening / selection and exploratory checks.
+
+2. **`scripts/02_spatial-SDMs.R`**  
+   Fit SDMs for each species (including spatial components when enabled) and generate predictions.
+
+3. **`scripts/03_threshold-selection.R`**  
+   Convert suitability to binary habitat (threshold optimisation) and prepare annual habitat rasters.
+
+4. **`scripts/04_national-trends_fragstats-*.R`**  
+   Compute national trajectories of landscape metrics (habitat amount + configuration).
+
+5. **`scripts/05_regional-trends_metrics.R`**  
+   Compute regional trajectories and summaries (e.g., by administrative regions / reporting units).
+
+6. **`scripts/06_fpca-glmm.R`**  
+   FPCA of demographic curves and GLMM modelling of persistence/extinction responses.
+
+> **Tip:** Scripts are designed to be run sequentially. If you re-run only later scripts, ensure the expected outputs from earlier steps exist.
+
+---
+
+## ✅ Outputs
+
+Most scripts write results (tables/figures/maps) to project output folders (created automatically or specified within each script).
+If you prefer a standard layout, we recommend creating:
+
+```
+outputs/
+├── sdm/
+├── habitat_maps/
+├── landscape_trends/
+└── fpca_glmm/
+```
+
+---
+
+## 🔖 Citation
+
+If you use this code or dataset, please cite:
+
+- **Dataset (Figshare)**: https://doi.org/10.6084/m9.figshare.30898223  
+- **Manuscript**: Valerio, F. *et al.* (in preparation). *[title to be updated]*
+
+A `CITATION.cff` file can be added once the final reference (journal / DOI) is available.
 
 ---
 
@@ -131,3 +159,8 @@ This project is released under the **MIT License** (see `LICENSE`).
 
 Francesco Valerio — fvalerio@cibio.up.pt
 
+---
+
+## 🧾 License
+
+This repository is released under the terms in `LICENSE` (see file).

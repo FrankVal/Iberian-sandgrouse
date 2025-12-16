@@ -4,7 +4,7 @@ This folder contains the input datasets used in the paper and the associated met
 
 ## Metadata files
 - `metadata/codebook_sdm_occurrence.csv`: data dictionary for SDM presence/absence inputs.
-- `metadata/codebook_demography_fpca_glmm.csv`: data dictionary for demographic inputs used in FPCA-GLMM analyses.
+- `metadata/codebook_demography_fpca_glmm.csv`: data dictionary for demographic status (persistence/extinction) used in FPCA-GLMM analyses.
 - `metadata/sites_lookup.csv`: lookup table of unique 10×10 km UTM grid cells.
 
 ## Coordinate system

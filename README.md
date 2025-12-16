@@ -4,13 +4,13 @@
 
 🧭 **Purpose.** Reproducible **data + R workflow** supporting a manuscript on how **habitat composition and configuration** relate to **persistence/extinction** of two declining sandgrouse in Spanish agro‑steppes.
 
-🕊️ **Focal species**
+🐤 **Focal species**
 - **Pin‑tailed Sandgrouse** (*Pterocles alchata*) — PTS
 - **Black‑bellied Sandgrouse** (*Pterocles orientalis*) — BBS
 
 ---
 
-## ✨ What this project does
+## 💿 What this repository does
 
 This pipeline links three components:
 
@@ -65,7 +65,7 @@ Iberian-sandgrouse/
 
 ---
 
-## 🧪 Scripts
+## 📟 Scripts
 
 🟦 **01 — screening & predictor filtering**  
 `01_screening-boruta.R` screens candidate predictors (e.g., Boruta / correlation checks) to reduce redundancy before SDMs.
@@ -99,7 +99,7 @@ If you add new datasets, please also update `data/README.md` (source, date, proc
 
 ---
 
-## ♻️ Reproducibility notes
+## 🔓 Reproducibility notes
 
 - Run from the **repository root** (avoid absolute paths).  
 - Set / record random seeds where applicable (SDM resampling, RF fitting).  

@@ -11,7 +11,7 @@ The workflow links **species distribution modelling (SDMs)** with **annual habit
 
 ---
 
-## 🧭 Summary
+## Summary
 
 Across Iberian agro-steppe landscapes, sandgrouse populations have declined alongside widespread land-use change and agricultural intensification. Here we combine SDMs with time-series habitat mapping and landscape metrics to quantify **where suitable habitat occurs**, **how it changed from 2005–2022**, and **how habitat dynamics relate to persistence/extinction patterns**.
 
@@ -24,7 +24,7 @@ At a high level, the pipeline:
 
 ---
 
-## ✨ Key features
+## Key features
 
 - 🔎 **SDMs** with Random Forest and spatial filtering (Moran eigenvector–style approaches when applicable)
 - 🗺️ **Annual habitat maps** (2005–2022) for both species
@@ -33,7 +33,7 @@ At a high level, the pipeline:
 
 ---
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```
 .
@@ -66,14 +66,14 @@ At a high level, the pipeline:
 
 ---
 
-## 💻 Setup
+## Setup
 
-### 1) Get the data
+### 1) Get the data 🗂️ 
 Download the dataset from Figshare and place the contents in the repository `data/` folder (keeping the same subfolder structure):
 
-📦 https://doi.org/10.6084/m9.figshare.30898223
+https://doi.org/10.6084/m9.figshare.30898223
 
-### 2) R environment
+### 2) R environment 💻 
 We recommend running with a recent R version (≥ 4.2). Install required packages before running the scripts.
 
 Typical dependencies include (non-exhaustive):  
@@ -87,18 +87,18 @@ renv::restore()
 
 ---
 
-## 🛰️ Google Earth Engine (optional but recommended)
+## Google Earth Engine (optional but recommended)
 
 Some inputs (e.g., remote-sensing predictors and/or mapped surfaces) can be generated in Google Earth Engine.
 
-👉 Open the shared GEE repository here:  
+🛰️ Open the shared GEE repository here:  
 https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia
 
 ---
 
-## 📟  Reproduce the analysis
+## Reproduce the analysis
 
-Run scripts in order from the project root:
+📟 Run scripts in order from the project root:
 
 1. **`scripts/01_screening-boruta.R`**  
    Variable screening / selection and exploratory checks.
@@ -122,12 +122,12 @@ Run scripts in order from the project root:
 
 ---
 
-## ✅ Outputs
+## Outputs
 
 Most scripts write results (tables/figures/maps) to project output folders (created automatically or specified within each script).
 If you prefer a standard layout, we recommend creating:
 
-```
+✅ ```
 outputs/
 ├── sdm/
 ├── habitat_maps/
@@ -137,23 +137,23 @@ outputs/
 
 ---
 
-## 🔖 Citation
+## Citation
 
 If you use this code or dataset, please cite:
 
 - **Dataset (Figshare)**: https://doi.org/10.6084/m9.figshare.30898223  
-- **Manuscript**: Valerio, F. *et al.* (in preparation). *[title to be updated]*
+🔖 - **Manuscript**: Valerio, F. *et al.* (in preparation). *[title to be updated]*
 
 A `CITATION.cff` file can be added once the final reference (journal / DOI) is available.
 
 ---
 
-## ✉️ Contact
+## Contact
 
-Francesco Valerio — fvalerio@cibio.up.pt
+✉️ Francesco Valerio — fvalerio@cibio.up.pt
 
 ---
 
-## 🧾 License
+## License
 
-This repository is released under the terms in `LICENSE` (see file).
+🧾 This repository is released under the terms in `LICENSE` (see file).

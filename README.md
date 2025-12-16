@@ -48,14 +48,14 @@ At a high level, the pipeline:
 │   │   ├── sites_lookup.csv
 │   │   └── README.md
 │   └── sdm/
-│       ├── P_alchata_presence_absence_*.csv
-│       ├── P_orientalis_presence_absence_*.csv
+│       ├── P_alchata_presence_absence*.csv
+│       ├── P_orientalis_presence_absence*.csv
 │       └── README.md
 ├── scripts/
 │   ├── 01_screening-boruta.R
 │   ├── 02_spatial-SDMs.R
 │   ├── 03_threshold-selection.R
-│   ├── 04_national-trends_fragstats-*.R
+│   ├── 04_national-trends_fragstats*.R
 │   ├── 05_regional-trends_metrics.R
 │   └── 06_fpca-glmm.R
 ├── LICENSE

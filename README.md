@@ -26,3 +26,28 @@ Core workflow:
 
 ## Repository structure
 
+├── data/
+│ ├── demography_fpca_glmm/
+│ │ ├── P_alchata_demography.csv
+│ │ ├── P_orientalis_demography.csv
+│ │ └── README.md
+│ ├── metadata/
+│ │ ├── README.md
+│ │ ├── codebook_demography_fpca_glmm.csv
+│ │ ├── codebook_sdm_occurrence.csv
+│ │ └── sites_lookup.csv
+│ └── sdm/
+│ ├── P_alchata_presence_absence.csv
+│ ├── P_orientalis_presence_absence.csv
+│ └── README.md
+│
+├── scripts/
+│ ├── 01_screening-boruta.R
+│ ├── 02_spatial-SDMs.R
+│ ├── 03_threshold-selection.R
+│ ├── 04_national-trends_fragstats-metrics.R
+│ ├── 05_regional-trends_metrics.R
+│ └── 06_fpca-glmm.R
+│
+├── LICENSE
+└── README.md

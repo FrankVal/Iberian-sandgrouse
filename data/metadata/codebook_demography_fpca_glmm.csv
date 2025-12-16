@@ -8,3 +8,4 @@ LPI,numeric,%,,Largest patch index (LPI) of the focal habitat class within the 1
 NP,integer,n,,Number of patches (NP) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (count).
 Year,integer,year,,Reference year associated with the landscape metrics/status.,yes,
 RegSect,character,,,Regional sector identifier,recommended,
+

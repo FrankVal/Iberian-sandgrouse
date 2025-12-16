@@ -1,6 +1,6 @@
 # ============================================================
 # Script: 04_national-trends_fragstats-metrics.R
-# Purpose: Compute FRAGSTATS-style class/landscape metrics from binary habitat maps
+# Purpose: Compute FRAGSTATS-style class/landscape metrics from binary habitat maps.
 #          (CA, NP, AREA_MN, LPI, ED) for 2005–2022.
 #
 # Input rasters (downloaded from Figshare: https://doi.org/10.6084/m9.figshare.30898223 and stored locally):

@@ -29,7 +29,7 @@ At a high level, the pipeline:
 - 🔎 **SDMs** with Random Forest and spatial filtering (Moran eigenvector–style approaches when applicable)
 - 🗺️ **Annual habitat maps** (2005–2022) for both species
 - 📏 **Landscape trends** using FRAGSTATS-style metrics (national,regional,local)
-- 🧬 **Demography + persistence modelling** via FRAGSTATS metrics and sandgrouse status using FPCA–GLMM
+- 〽️ **Demography + persistence modelling** via FRAGSTATS metrics and sandgrouse status using FPCA–GLMM
 
 ---
 

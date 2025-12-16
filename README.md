@@ -66,7 +66,7 @@ At a high level, the pipeline:
 
 ---
 
-## 🚀 Setup
+## 💻 Setup
 
 ### 1) Get the data
 Download the dataset from Figshare and place the contents in the repository `data/` folder (keeping the same subfolder structure):

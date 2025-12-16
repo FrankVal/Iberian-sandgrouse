@@ -7,5 +7,5 @@ ED,numeric,m/ha,,Edge density (ED) of the focal habitat class within the 10×10 
 LPI,numeric,%,,Largest patch index (LPI) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (%).
 NP,integer,n,,Number of patches (NP) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (count).
 Year,integer,year,,Reference year associated with the landscape metrics/status.,yes,
-RegSect,character,,,Regional sector identifier,recommended,
+RegSect,character,,,Regional sector identifier.,recommended,
 

@@ -5,11 +5,11 @@
 # of landscape metrics per UTMCODE.
 #
 # Notes:
-# - Only Status ∈ {Persistence, Extinction} are retained (Colonization removed).
-# - Species is ignored (optional filter if you want).
-# - Random effect: (1 | RegSect). No Year random effect (Year enters via FPCA).
-# - Metrics: AREA_MN, ED, LPI, NP, CA  (TA ≡ CA).
-# - Variance target: 0.80; max 2 PCs per metric.
+# - Only Status ∈ {Persistence, Extinction} are retained (Colonization removed)
+# - Species is ignored (optional filter if you want)
+# - Random effect: (1 | RegSect). No Year random effect (Year enters via FPCA)
+# - Metrics: AREA_MN, ED, LPI, NP, CA  (CA)
+# - Variance target: 0.80; max 2 PCs per metric
 # ============================
 
 suppressPackageStartupMessages({

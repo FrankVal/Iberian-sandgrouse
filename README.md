@@ -87,18 +87,18 @@ renv::restore()
 
 ---
 
-## Google Earth Engine (optional but recommended)
+## Google Earth Engine (optional but recommended) 🛰️ 
 
 Some inputs (e.g., remote-sensing predictors and/or mapped surfaces) can be generated in Google Earth Engine.
 
-🛰️ Open the shared GEE repository here:  
+Open the shared GEE repository here:  
 https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia
 
 ---
 
-## Reproduce the analysis
+## Reproduce the analysis 📟 
 
-📟 Run scripts in order from the project root:
+Run scripts in order from the project root:
 
 1. **`scripts/01_screening-boruta.R`**  
    Variable screening / selection and exploratory checks.
@@ -122,12 +122,12 @@ https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIber
 
 ---
 
-## Outputs
+## Outputs ✅ 
 
 Most scripts write results (tables/figures/maps) to project output folders (created automatically or specified within each script).
 If you prefer a standard layout, we recommend creating:
 
-✅ ```
+```
 outputs/
 ├── sdm/
 ├── habitat_maps/
@@ -137,20 +137,20 @@ outputs/
 
 ---
 
-## Citation
+## Citation 🔖 
 
 If you use this code or dataset, please cite:
 
 - **Dataset (Figshare)**: https://doi.org/10.6084/m9.figshare.30898223  
-🔖 - **Manuscript**: Valerio, F. *et al.* (in preparation). *[title to be updated]*
+- **Manuscript**: Valerio, F. *et al.* (in preparation). *[title to be updated]*
 
 A `CITATION.cff` file can be added once the final reference (journal / DOI) is available.
 
 ---
 
-## Contact
+## Contact ✉️ 
 
-✉️ Francesco Valerio — fvalerio@cibio.up.pt
+Francesco Valerio — fvalerio@cibio.up.pt
 
 ---
 

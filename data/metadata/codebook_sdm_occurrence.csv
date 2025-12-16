@@ -1,5 +1,5 @@
 field_name,type,units,allowed_values,description,required,notes
-species,character,,P_alchata|P_orientalis,Species code,optional,
+species,character,,P_alchata|P_orientalis,Species code,optional,Use P_alchata for Pin-tailed Sandgrouse and P_orientalis for Black-bellied Sandgrouse.
 year,integer,year,,Observation year.,optional,
 date,character,YYYY-MM-DD,,Observation date.,optional,
 pa,integer,,0|1,Presence (1) / absence (0) response used for SDMs.,yes,

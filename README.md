@@ -1,8 +1,5 @@
 # Iberian sandgrouse — habitat dynamics & persistence modelling (Spain, 2005–2022)
 
-![R](https://img.shields.io/badge/R-%E2%89%A54.2-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 ![R](https://img.shields.io/badge/R-%E2%89%A5%204.2-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 🧭 **Purpose.** Reproducible **data + R workflow** supporting a manuscript on how **habitat composition and configuration** relate to **persistence/extinction** of two declining sandgrouse in Spanish agro‑steppes.

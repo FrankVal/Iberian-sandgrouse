@@ -1,7 +1,7 @@
 # ============================================================
 # Script: 05_regional-trends_metrics.R
 # Purpose: Regional (NUTS-2) changes in multiple habitat metrics derived from
-#          Spain-wide binary habitat maps (https://doi.org/10.6084/m9.figshare.30898223), comparing:
+#          Spain-wide binary habitat maps (https://doi.org/10.6084/m9.figshare.30898223) comparing:
 #            - Initial period: 2005–2007
 #            - Ending period : 2019–2022
 #

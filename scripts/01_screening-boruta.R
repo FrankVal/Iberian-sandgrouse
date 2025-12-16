@@ -4,7 +4,7 @@
 # Method : Boruta feature selection on a presence/absence response
 #
 # Input  : CSV table with response column 'pa' and predictor columns
-#          Place the CSV in: data/processed/
+#          Place the CSV in data/processed/
 #
 # Exclude: date, Species, x, y columns (case-insensitive; not used as predictors)
 #

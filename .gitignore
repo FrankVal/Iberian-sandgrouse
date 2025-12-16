@@ -1,22 +1,85 @@
-﻿# R / RStudio
+﻿# Iberian-sandgrouse
+
+Reproducible data + R code for the Iberian sandgrouse manuscript, covering:
+1) habitat suitability modelling (SDMs),
+2) landscape trend analyses (Fragstats metrics; 2005–2022),
+3) functional modelling of persistence/extinction using FPCA–GLMM.
+
+> The repository is organised so that all analyses can be re-run from the project root using relative paths.
+
+---
+
+## Citation
+
+Please cite the associated manuscript:
+
+**[Authors]** (Year). *[Title]*. [Journal / preprint DOI].
+
+A `CITATION.cff` file can be added once the reference/DOI is final.
+
+---
+
+## Repository structure
+
+---
+
+## Requirements
+
+- R >= 4.2
+- Suggested packages include: `terra`, `sf`, `dplyr`, `tidyr`, `purrr`, `glmmTMB`, `pROC`, `performance`, `ggplot2` (see individual scripts).
+
+**Recommended**: open the project in RStudio and set the working directory to the repository root.
+
+---
+
+## How to run (recommended order)
+
+From the repository root:
+
+1. **Screening / variable selection**
+   - `scripts/01_screening-boruta.R`
+
+2. **Spatial SDMs**
+   - `scripts/02_spatial-SDMs.R`
+
+3. **Threshold selection**
+   - `scripts/03_threshold-selection.R`
+
+4. **National trends (Fragstats metrics; 2005–2022)**
+   - `scripts/04_national-trends_fragstats-metrics.R`
+
+5. **Regional trends**
+   - `scripts/05_regional-trends_metrics.R`
+
+6. **FPCA–GLMM (functional landscape effects on persistence)**
+   - `scripts/06_fpca-glmm.R`
+
+Example (command line):
+```bash
+Rscript scripts/04_national-trends_fragstats-metrics.R
+
+---
+
+## 3) Add/update a clean .gitignore (safe defaults)
+This won’t block your `data/` and `scripts/` folders, only junk:
+
+```powershell
+@'
+# R session / user files
 .Rhistory
 .RData
+.Ruserdata
 .Rproj.user/
-*.Rproj
+*.Rproj.user
 
-# OS
+# OS junk
 .DS_Store
 Thumbs.db
 
-# Outputs (recommended)
+# Temporary / output folders (edit if you actually store results here)
+tmp/
+temp/
+output/
 outputs/
-results/
 figures/
 plots/
-cache/
-tmp/
-
-# GIS sidecars / intermediates
-*.aux.xml
-*.ovr
-*.tif.aux.xml

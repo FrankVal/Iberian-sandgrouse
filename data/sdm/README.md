@@ -2,6 +2,6 @@
 
 Species-specific presence/absence input tables for SDM fitting.
 
-Contained files:
+Contents:
 - P_alchata_presence_absence.csv
 - P_orientalis_presence_absence.csv

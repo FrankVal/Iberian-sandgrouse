@@ -26,7 +26,7 @@ At a high level, the pipeline:
 
 ## Key features
 
-- 🔎 **SDMs** with Random Forest and spatial filtering (Moran eigenvector–style approaches when applicable)
+- 🔎 **SDMs** with Random Forest and spatial filtering (Moran eigenvector)
 - 🗺️ **Annual habitat maps** (2005–2022) for both species
 - 〽️ **Landscape trends** using FRAGSTATS-style metrics (national,regional,local)
 - 🚩 **Persistence modelling** via FRAGSTATS metrics and sandgrouse status using FPCA–GLMM
@@ -76,20 +76,15 @@ https://doi.org/10.6084/m9.figshare.30898223
 ### 2) R environment 💻 
 We recommend running with a recent R version (≥ 4.2). Install required packages before running the scripts.
 
-Typical dependencies include (non-exhaustive):  
+Typical dependencies include:  
 `terra`, `sf`, `dplyr`, `tidyr`, `ggplot2`, `readr`, `stringr`, `lubridate`,  
 `ranger`, `spatialRF` (if used), `landscapemetrics`, `glmmTMB` (and/or similar), and FPCA utilities.
-
-If your workflow uses **renv**, run:
-```r
-renv::restore()
-```
 
 ---
 
 ## Google Earth Engine (optional but recommended) 🛰️ 
 
-Some inputs (e.g., remote-sensing predictors and/or mapped surfaces) can be generated in Google Earth Engine.
+Some inputs (e.g., remote-sensing predictors) can be generated in Google Earth Engine.
 
 Open the shared GEE repository here:  
 https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia

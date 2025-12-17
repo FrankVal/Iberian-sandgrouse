@@ -3,6 +3,8 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 ![Study area](https://img.shields.io/badge/Area-Continental%20Spain-informational)
+![Period](https://img.shields.io/badge/Period-2005%E2%80%932022-informational)
+![Resolution](https://img.shields.io/badge/Grain-250%20m-informational)
 
 
 # Sandgrouse analyses — habitat dynamics (2005-2022) & persistence modelling

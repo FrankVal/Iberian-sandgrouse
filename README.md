@@ -18,18 +18,18 @@ Across Iberian agro-steppe landscapes, sandgrouse populations have declined alon
 At a high level, the pipeline:
 
 1) fits SDMs using occurrence data and environmental predictors,  
-2) produces annual suitability surfaces and binary habitat maps,  
-3) derives landscape metrics (e.g., habitat amount and configuration) nationally and by region, and  
-4) models persistence/extinction using FPCA–GLMM on demographic trajectories.
+2) produces annual habitat maps,  
+3) derives landscape metrics (e.g., habitat amount and configuration) and  
+4) models persistence/extinction on landscape trajectories.
 
 ---
 
 ## Key features
 
-- 🔎 **SDMs** with Random Forest and spatial filtering (Moran eigenvector)
+- 🔎 **SDMs** with Random Forests and spatial filtering (Moran eigenvector)
 - 🗺️ **Annual habitat maps** (2005–2022) for both species
 - 〽️ **Landscape trends** using FRAGSTATS-style metrics (national,regional,local)
-- 🚩 **Persistence modelling** via FRAGSTATS metrics and sandgrouse status using FPCA–GLMM
+- 🚩 **Persistence modelling** via local class-level metrics and sandgrouse status using FPCA–GLMM
 
 ---
 
@@ -99,7 +99,7 @@ Run scripts in order from the project root:
    Variable screening / selection and exploratory checks.
 
 2. **`scripts/02_spatial-SDMs.R`**  
-   Fit SDMs for each species (including spatial components when enabled) and generate predictions.
+   Fit SDMs for each species (including spatial components).
 
 3. **`scripts/03_threshold-selection.R`**  
    Convert suitability to binary habitat (threshold optimisation) and prepare annual habitat rasters.

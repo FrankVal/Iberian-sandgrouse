@@ -1,3 +1,5 @@
+![R](https://img.shields.io/badge/R-%E2%89%A5%204.2-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green)
+
 # Sandgrouse analyses — habitat dynamics (2005-2022) & persistence modelling
 
 This repository contains **data + reproducible R code** supporting our analyses of two declining Iberian sandgrouses:

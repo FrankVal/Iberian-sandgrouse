@@ -58,7 +58,7 @@ At a high level, the pipeline:
 │   │   └── README.md
 │   └── sdm/
 │       ├── P_alchata_presence_absence.csv
-│       ├── P_orientalis_presence_absence*.csv
+│       ├── P_orientalis_presence_absence.csv
 │       └── README.md
 ├── scripts/
 │   ├── 01_screening-boruta.R

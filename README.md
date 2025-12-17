@@ -15,7 +15,7 @@ This repository contains **data + reproducible R code** supporting our analyses 
 - **Pin‑tailed Sandgrouse** (*Pterocles alchata*) — PTS
 - **Black‑bellied Sandgrouse** (*Pterocles orientalis*) — BBS
 
-The workflow links **species distribution modelling (SDMs)** with **annual habitat mapping (2005–2022)**, **landscape class-level metrics**, and **functional persistence/extinction modelling** using **FPCA–GLMM**.
+The workflow links **species distribution modelling (SDMs)** with **annual habitat mapping**, **landscape class-level metrics**, and **functional persistence/extinction modelling** using **FPCA–GLMM**.
 
 
 ---

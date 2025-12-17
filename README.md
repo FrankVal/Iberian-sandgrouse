@@ -1,6 +1,7 @@
 ![R](https://img.shields.io/badge/R-%E2%89%A5%204.2-blue)
 [![Google Earth Engine](https://img.shields.io/badge/Google%20Earth%20Engine-GEE-4285F4?logo=googleearth&logoColor=white)](https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
+![Study area](https://img.shields.io/badge/Area-Continental%20Spain-informational)
 
 
 # Sandgrouse analyses — habitat dynamics (2005-2022) & persistence modelling

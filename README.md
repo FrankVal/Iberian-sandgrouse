@@ -57,7 +57,7 @@ At a high level, the pipeline:
 │   │   ├── sites_lookup.csv
 │   │   └── README.md
 │   └── sdm/
-│       ├── P_alchata_presence_absence*.csv
+│       ├── P_alchata_presence_absence.csv
 │       ├── P_orientalis_presence_absence*.csv
 │       └── README.md
 ├── scripts/

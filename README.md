@@ -45,7 +45,6 @@ At a high level, the pipeline:
 ## Repository structure
 
 ```
-.
 ├── data/
 │   ├── demography_fpca_glmm/
 │   │   ├── P_alchata_demography.csv

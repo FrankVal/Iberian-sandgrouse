@@ -1,4 +1,4 @@
-# Iberian Sandgrouse (Spain, 2005–2022) — habitat dynamics & persistence modelling
+# Sandgrouse analyses — habitat dynamics (2005-2022) & persistence modelling
 
 This repository contains **data + reproducible R code** supporting our analyses of two declining Iberian sandgrouses:
 

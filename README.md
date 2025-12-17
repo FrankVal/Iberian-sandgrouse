@@ -7,7 +7,7 @@
 ![Resolution](https://img.shields.io/badge/Grain-250%20m-informational)
 
 
-# Sandgrouse analyses — habitat dynamics (2005-2022) & persistence modelling
+# Sandgrouse analyses — habitat dynamics & persistence modelling
 
 This repository contains **data + reproducible R code** supporting our analyses of two declining Iberian sandgrouses:
 

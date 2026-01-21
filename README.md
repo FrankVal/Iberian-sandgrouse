@@ -46,18 +46,18 @@ At a high level, the pipeline:
 
 ```
 ├── data/
-│   ├── status_fpca_glmm/
-│   │   ├── P_alchata_status.csv
-│   │   ├── P_orientalis_status.csv
-│   │   └── README.md
 │   ├── metadata/
-│   │   ├── codebook_status_fpca_glmm.csv
 │   │   ├── codebook_sdm_occurrence.csv
+│   │   ├── codebook_status_fpca_glmm.csv
 │   │   ├── sites_lookup.csv
 │   │   └── README.md
-│   └── sdm/
-│       ├── P_alchata_presence_absence.csv
-│       ├── P_orientalis_presence_absence.csv
+│   ├── sdm/
+│   │   ├── P_alchata_presence_absence.csv
+│   │   ├── P_orientalis_presence_absence.csv
+│   │   └── README.md
+│   └── status_fpca_glmm/
+│       ├── P_alchata_status.csv
+│       ├── P_orientalis_status.csv
 │       └── README.md
 ├── scripts/
 │   ├── 01_screening-boruta.R

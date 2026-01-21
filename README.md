@@ -46,12 +46,12 @@ At a high level, the pipeline:
 
 ```
 ├── data/
-│   ├── demography_fpca_glmm/
-│   │   ├── P_alchata_demography.csv
-│   │   ├── P_orientalis_demography.csv
+│   ├── status_fpca_glmm/
+│   │   ├── P_alchata_status.csv
+│   │   ├── P_orientalis_status.csv
 │   │   └── README.md
 │   ├── metadata/
-│   │   ├── codebook_demography_fpca_glmm.csv
+│   │   ├── codebook_status_fpca_glmm.csv
 │   │   ├── codebook_sdm_occurrence.csv
 │   │   ├── sites_lookup.csv
 │   │   └── README.md
@@ -86,13 +86,13 @@ We recommend running with a recent R version (≥ 4.2). Install required package
 
 Typical dependencies include:  
 `terra`, `sf`, `dplyr`, `tidyr`, `ggplot2`, `readr`, `stringr`, `lubridate`,  
-`ranger`, `spatialRF` (if used), `landscapemetrics`, `glmmTMB` (and/or similar), and FPCA utilities.
+`ranger`, `spatialRF` (if used), `landscapemetrics`, `glmmTMB`, and FPCA utilities.
 
 ---
 
 ## Google Earth Engine (optional but recommended) 🛰️ 
 
-Some inputs (e.g., remote-sensing predictors) can be generated in Google Earth Engine.
+Some inputs (e.g., remote-sensing predictors) are generated in Google Earth Engine.
 
 Open the shared GEE repository here:  
 https://code.earthengine.google.com/?accept_repo=users/valeriofrank/CorticolIberia

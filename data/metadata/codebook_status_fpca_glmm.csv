@@ -1,7 +1,7 @@
 field_name,type,units,allowed_values,description,required,notes
 Species,character,,P_alchata|P_orientalis,Species code.,yes,Use P_alchata for Pin-tailed Sandgrouse and P_orientalis for Black-bellied Sandgrouse.
 UTMCODE,character,,,"10×10 km UTM grid cell code (UTMCODE) used as spatial unit (Mougeot et al., 2021).",yes,Primary key for joins across demography and landscape metrics.
-Status,character,,Persistent|Extinct,Demographic status of the cell over the interval: Persistent or Extinct.,yes,Define the exact rule for Persistent/Extinct in Methods.
+Status,character,,Persistent|Extinct,Status of the cell over the interval: Persistent or Extinct.,yes,Define the exact rule for Persistent/Extinct in Methods.
 CA,numeric,km^2,,Class area (CA) of the focal habitat class within the 10×10 km cell.,yes,In the manuscript/figures this metric is labelled CA (km^2).
 AREA_MN,numeric,ha,,Mean patch area (AREA_MN) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (ha).
 ED,numeric,m/ha,,Edge density (ED) of the focal habitat class within the 10×10 km cell.,yes,Units follow the figure (m/ha).

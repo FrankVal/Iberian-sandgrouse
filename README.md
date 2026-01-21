@@ -119,7 +119,7 @@ Run scripts in order from the project root:
    Compute regional trajectories and summaries (e.g., by administrative regions / reporting units).
 
 6. **`scripts/06_fpca-glmm.R`**  
-   FPCA of demographic curves and GLMM modelling of persistence/extinction responses.
+   FPCA and GLMM modelling of persistence/extinction responses.
 
 > **Tip:** Scripts are designed to be run sequentially. If you re-run only later scripts, ensure the expected outputs from earlier steps exist.
 
